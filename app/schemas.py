@@ -4,9 +4,9 @@ from datetime import datetime
 
 # 入力用：商品登録
 class ProductCreate(BaseModel):
-    CODE: constr(min_length=1, max_length=13)
-    NAME: constr(min_length=1, max_length=50)
-    PRICE: int = Field(gt=0, description="価格は0より大きくしてください")
+    CODE: str #constr(min_length=1, max_length=13)
+    NAME: str #constr(min_length=1, max_length=50)
+    PRICE: int #= Field(gt=0, description="価格は0より大きくしてください")
 
 # 出力用：商品取得
 class Product(ProductCreate):
